@@ -5,7 +5,7 @@ import java.security.MessageDigest
 import kotlin.system.exitProcess
 import kotlin.text.Charsets.UTF_8
 
-class AOC2015_4A: BaseAoc() {
+class AOC2015_4B: BaseAoc() {
     init {
         val input = "bgvyzdsv"
 
@@ -26,5 +26,5 @@ class AOC2015_4A: BaseAoc() {
 }
 
 fun main() {
-    AOC2015_4A()
+    AOC2015_4B()
 }
