@@ -7,7 +7,6 @@ import be.krikkrok.fifteen.pojo.FlightDistance
 import be.krikkrok.fifteen.util.StringPermutator
 import kotlin.collections.HashMap
 
-//Takes 26 minutes to run...needs work
 class AOC2015_10B : BaseAoc() {
 
     var input = "3113322113"
@@ -23,7 +22,7 @@ class AOC2015_10B : BaseAoc() {
     }
 
     fun lookAndSay(input: String): String {
-        var output = ""
+        var output = StringBuilder()
 
         var currentChar = 'A'
         var currentCount = 0
@@ -38,14 +37,15 @@ class AOC2015_10B : BaseAoc() {
                     currentCount++
                 }
                 else -> {
-                    output = "$output$currentCount$currentChar"
+                    output = output.append("$currentCount$currentChar")
                     currentChar = c
                     currentCount = 1
                 }
             }
         }
 
-        return "$output$currentCount$currentChar"
+        output = output.append("$currentCount$currentChar")
+        return output.toString()
     }
 }
 
